@@ -1,0 +1,56 @@
+
+.backDrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0, .6);
+    height: 100vh;
+    display: none;
+}
+.backDrop.visible{
+    display: block;
+    animation: fade-in .2s ease-in-out;
+}
+ 
+
+.myModel{
+    position: fixed;
+     top: 20vh;
+    left: 20%;
+    width: 60%;
+    display: none;
+}
+.myModel.visible{
+    display: block;
+    animation: fade-slide-down 0.3s ease-in forwards;
+}
+
+.movieClose{
+    cursor: pointer;
+}  
+.movieImg{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+@keyframes fade-slide-down{
+    from{
+        margin-top: -50px;
+        opacity: 0;
+    }
+    to{
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+@keyframes fade-in{
+    from{         
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
